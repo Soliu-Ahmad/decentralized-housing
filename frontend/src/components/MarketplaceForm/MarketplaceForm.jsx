@@ -46,10 +46,10 @@ const MarketplaceForm = ({ addBlogPost }) => {
         <input type="text" name="title" value={formData.title} onChange={handleChange} required />
       </div>
       <div className="form-group">
-        <label>Location</label>
+        <label>Location</label> 
         <input type="text" name="location" value={formData.location} onChange={handleChange} required />
       </div>
-      <div className="form-group">
+      <div className="form-group"> 
         <label>Features</label>
         <input type="text" name="features" value={formData.features} onChange={handleChange} required />
       </div>

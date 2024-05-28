@@ -11,8 +11,8 @@ function App() {
    <BrowserRouter>
     <Routes>
       <Route path="/" element={<Home/>}/>
-      {/* <Route path="/blogs" element={<Blog/>}/> */}
-      {/* <Route path="/marketplace" element={<Marketplace/>}/> */}
+      <Route path="/blogs" element={<Blog/>}/>
+      <Route path="/marketplace" element={<Marketplace/>}/>
       <Route path="/footer" element={<Footer/>}/>
       <Route path="/marketplace-form" element={<MarketplaceForm/>}/>
 
