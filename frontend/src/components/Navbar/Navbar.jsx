@@ -10,19 +10,19 @@ const Navbar = () => {
   };
 
   const connect = () => {
-    alert("Currently not available")
-  }
+    alert("Currently not available");
+  };
 
   return (
     <div>
-        <nav>
+        <nav className='nav-header'>
             <h2>LOGO</h2>
             <ul className={isMenuOpen ? 'nav-links open' : 'nav-links'}>
                 <li>Property</li>
                 <li>FAQSs</li>
-                <li>contact</li>
+                <li>Contact</li>
+                <li className="connect"><button onClick={connect} className='connect'>Connect Wallet</button></li>
             </ul>
-            <button onClick={connect} className='connect'>Connect Wallet</button>
             <IoMdMenu className='menu-icon' onClick={toggleMenu} />
         </nav>
     </div>
