@@ -11,18 +11,18 @@
     display: flex;
     gap: 2rem;
     padding: 20px;
-    flex-wrap: wrap; 
+    /* flex-wrap: wrap;  */
 }
 
 .--header-first {
     padding: 15px;
-    background-color: white;
+    /* background-color: white; */
     box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.21);
     -webkit-box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.21);
     -moz-box-shadow: 1px 10px 5px 0px rgba(0, 0, 0, 0.21);
     flex: 1; 
     min-width: 250px;
-}
+} 
 
 /* Media Queries */
 @media (max-width: 1024px) {
