@@ -21,14 +21,14 @@ const Footer = () => {
           <button type="submit">Subscribe</button>
         </form>
       </div>
-      <div className="footer">
-        <div className="footer-info">
-          <div className="contact">
+      <div className="--footer">
+        <div className="--footer-info">
+          <div className="--contact">
             <h1>Contact</h1>
             <p>Phone: (123) 456-7890</p>
             <p>Address: 123 Main St, Anytown, USA</p>
             <p>Email: info@example.com</p>
-            <div className="social-links">
+            <div className="--social-links">
               <a href="#" target="_blank" rel="noopener noreferrer">
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
