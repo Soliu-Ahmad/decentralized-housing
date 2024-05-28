@@ -1,5 +1,6 @@
 import Home from "./Pages/Home/Home"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Marketplace from "./components/Marketplace/Marketplace"
 import Blog from "./components/Content/blogs/pages/Blog"
 import Marketplace from "./components/Marketplace/Marketplace"
 import Footer from "./components/Footer/Footer"
@@ -15,6 +16,7 @@ function App() {
       <Route path="/marketplace" element={<Marketplace/>}/>
       <Route path="/footer" element={<Footer/>}/>
       <Route path="/marketplace-form" element={<MarketplaceForm/>}/>
+
 
     </Routes>
    </BrowserRouter>

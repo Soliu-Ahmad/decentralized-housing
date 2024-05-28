@@ -5,7 +5,9 @@ import { FaMapMarkerAlt, FaBed, FaShieldAlt } from 'react-icons/fa';
 const Marketplace = () => {
   return (
     <div className="blogs-container">
-      <div className="title">Market Place</div> 
+      <div className="title">
+        <h2>Market Place</h2>
+      </div> 
       
       {[1, 2, 3, 4, 5, 6].map((item, index) => (
         <div className="blog-post" key={index}>
@@ -25,7 +27,7 @@ const Marketplace = () => {
             $1500
           </div>
           <div className="read-more">
-            <button>Continue Reading</button>
+            <button>Buy</button>
           </div>
         </div>
       ))}

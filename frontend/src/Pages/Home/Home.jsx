@@ -6,6 +6,8 @@ import Hero from "../../components/Hero/Hero";
 import Content from "../../components/Content/Content";
 import DreamHome from "../../components/Dream/DreamHome";
 
+import Marketplace from "../../components/Marketplace/Marketplace";
+
 const Home = () => {
   return (
     <div>
@@ -15,6 +17,9 @@ const Home = () => {
       <div>
         <Hero />
       </div>
+      {/* <div>
+        <Marketplace />
+      </div> */}
       <div>
         <DreamHome/>
       </div>
