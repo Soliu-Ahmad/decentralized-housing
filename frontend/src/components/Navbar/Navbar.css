@@ -1,0 +1,90 @@
+nav {
+    color: black;
+    padding: 10px 20px;
+    display: flex;
+    font-size: 30px;
+    justify-content: space-between;
+   cursor: pointer;
+  background-color: white;
+  box-shadow: 1px 10px 5px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 1px 10px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+nav h2 {
+    margin: 0;
+    font-size: 30px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffa500;
+}
+
+.connect {
+    padding: 8px;
+    background-color: #03071e;
+    margin: 5px;
+    border: none;
+    font-size: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.connect:hover {
+    background-color:#03071e;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #333;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .connect {
+        display: none;
+    }
+}
