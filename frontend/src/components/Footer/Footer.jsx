@@ -12,7 +12,7 @@ const Footer = () => {
         </h1>
         <form action="#" method="post" className="subscribe-form">
           <input
-            type="email" 
+            type="email"
             name="email"
             id="email"
             placeholder="Enter your email"
@@ -51,5 +51,6 @@ const Footer = () => {
     </div>
   );
 };
+
 
 export default Footer;

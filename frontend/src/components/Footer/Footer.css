@@ -114,10 +114,9 @@
   background: #251200;
   background-size: cover;
   padding: 40px;
-  margin: 2rem auto;
-  width: 90%;
-  max-width: 1200px;  /* Centering in larger screens */
-  color: white;
+
+  /* color: white; */
+  margin-top: 2rem;
 }
 
 .footer-info {
@@ -129,6 +128,7 @@
 .contact {
   flex: 1;
   margin: 20px;
+  padding-right: 20px; 
 }
 
 .links {
@@ -180,6 +180,7 @@
 
   .contact, .links {
     margin: 10px 0;
+    padding-right: 0; /* Remove padding-right for smaller screens */
   }
 }
 
@@ -191,6 +192,8 @@
 
   .contact, .links {
     margin: 10px 0;
+    padding-right: 0; /* Remove padding-right for smaller screens */
+
   }
 
   .subscribe-form {

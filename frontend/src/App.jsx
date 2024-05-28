@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Blog from "./components/Content/blogs/pages/Blog"
 import Marketplace from "./components/Marketplace/Marketplace"
 import Footer from "./components/Footer/Footer"
+import MarketplaceForm from "./components/MarketplaceForm/MarketplaceForm"
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       {/* <Route path="/blogs" element={<Blog/>}/> */}
       {/* <Route path="/marketplace" element={<Marketplace/>}/> */}
       <Route path="/footer" element={<Footer/>}/>
+      <Route path="/marketplace-form" element={<MarketplaceForm/>}/>
 
     </Routes>
    </BrowserRouter>
