@@ -4,6 +4,8 @@ import Footer from "../../components/Footer/Footer";
 import Faqs from "../../components/Faqs/Faqs";
 import Hero from "../../components/Hero/Hero";
 import Content from "../../components/Content/Content";
+import DreamHome from "../../components/Dream/DreamHome";
+
 import Marketplace from "../../components/Marketplace/Marketplace";
 
 const Home = () => {
@@ -18,6 +20,9 @@ const Home = () => {
       {/* <div>
         <Marketplace />
       </div> */}
+      <div>
+        <DreamHome/>
+      </div>
       <div>
         <Content />
       </div>
