@@ -9,7 +9,7 @@ const Marketplace = () => {
         <h2>Market Place</h2>
       </div> 
       
-      {[1, 2, 3, 4, 5, 6].map((item, index) => (
+      {[1, 2, 3, 4, 5, 6, 7, 8, ].map((item, index) => (
         <div className="blog-post" key={index}>
           <div className="image-container">
             <img src="hom1.jpeg" alt="Blog" />
