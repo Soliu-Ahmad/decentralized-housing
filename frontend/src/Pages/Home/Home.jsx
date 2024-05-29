@@ -4,7 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import Faqs from "../../components/Faqs/Faqs";
 import Hero from "../../components/Hero/Hero";
 import Content from "../../components/Content/Content";
-import Marketplace from "../../components/Marketplace/Marketplace";
+// import Marketplace from "../../components/Marketplace/Marketplace";
 
 const Home = () => {
   return (
@@ -15,9 +15,6 @@ const Home = () => {
       <div>
         <Hero />
       </div>
-      {/* <div>
-        <Marketplace />
-      </div> */}
       <div>
         <Content />
       </div>
