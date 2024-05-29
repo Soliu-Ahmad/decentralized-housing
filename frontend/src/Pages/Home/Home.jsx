@@ -4,7 +4,7 @@ import Footer from "../../components/Footer/Footer";
 import Faqs from "../../components/Faqs/Faqs";
 import Hero from "../../components/Hero/Hero";
 import Content from "../../components/Content/Content";
-// import Marketplace from "../../components/Marketplace/Marketplace";
+import DreamHome from "../../components/Dream/DreamHome";
 
 const Home = () => {
   return (
@@ -14,6 +14,9 @@ const Home = () => {
       </div>
       <div>
         <Hero />
+      </div>
+      <div>
+        <DreamHome/>
       </div>
       <div>
         <Content />
