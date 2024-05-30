@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Marketplace.css';
+import './MarketplaceForm.css';
 
 const MarketplaceForm = ({ addBlogPost }) => {
   const [formData, setFormData] = useState({

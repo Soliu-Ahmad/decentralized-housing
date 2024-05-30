@@ -3,21 +3,19 @@ body {
   justify-content: center;
   align-items: center;
   background-size: cover;
+  min-height: 100vh;
 }
 
 .marketplace-container {
   padding: 40px;
-  margin: 0;
-  /* padding: 0; */
+  margin: 20px;
   font-family: Arial, sans-serif;
   background-color: rgba(255, 255, 255, 0.635);
-  align-items: center;
-  justify-content: center;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 800px;
   width: 100%;
-  margin: 0 auto;
+  box-sizing: border-box; 
 }
 
 .form-title {
@@ -72,25 +70,26 @@ body {
 }
 
 .marketplace-form button:hover {
-  background-color: rgb(55, 0, 255);
+  background-color: rgb(55, 0, 200);
 }
 
 /* Media Queries for Responsive Design */
 @media (max-width: 1024px) { /* Tablet screens */
-  .marketplace-form {
-    max-width: 500px;
+  .marketplace-container {
+    padding: 30px;
+    margin: 15px;
   }
 
   .form-columns {
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
   }
 }
 
 @media (max-width: 768px) { /* iPad screens */
-  .marketplace-form {
-    max-width: 100%;
-    padding: 15px;
+  .marketplace-container {
+    padding: 20px;
+    margin: 10px;
   }
 
   .form-columns {
@@ -104,9 +103,10 @@ body {
 }
 
 @media (max-width: 480px) { /* Mobile screens */
-  .marketplace-form {
-    max-width: 100%;
-    padding: 10px;
+  .marketplace-container {
+    padding: 15px;
+    margin: 10px; 
+    width: calc(100% - 20px); 
   }
 
   .form-title {
