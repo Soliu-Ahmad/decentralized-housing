@@ -3,6 +3,7 @@
     border-radius: 8px;
     background-color: #fff;
     padding: 20px;
+    color: black;
     margin: 10px;
     flex: 1;
     max-width: 300px;
@@ -40,7 +41,7 @@
 .blog-title, h2 {
     font-size: 1.5em;
     font-weight: bold;
-    color: #ffffff;
+    color: white;
 }
 
 .blog-location {
