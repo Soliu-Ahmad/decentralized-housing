@@ -16,7 +16,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-// Get all arts
+// How to get all House
 router.get('/', async (req, res) => {
   try {
     const property = await Property.find();
@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Add new art
+// Add new House
 router.post('/', upload.single('image'), async (req, res) => {
   const property = new Property({
     image: req.file.path,
