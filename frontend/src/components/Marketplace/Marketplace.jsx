@@ -1,30 +1,39 @@
-import React from 'react';
+// src/components/Marketplace.js
+import React, { useEffect, useState } from 'react';
 import './Marketplace.css';
-import { FaMapMarkerAlt, FaBed, FaShieldAlt } from 'react-icons/fa';
+import { FaMapMarkerAlt } from 'react-icons/fa';
+import axios from 'axios';
 
 const Marketplace = () => {
+  const [properties, setProperties] = useState([]);
+
+  useEffect(() => {
+    axios.get('http://localhost:5000/properties')
+      .then(response => {
+        setProperties(response.data);
+      })
+      .catch(error => {
+        console.error('There was an error fetching the properties!', error);
+      });
+  }, []);
+
   return (
     <div className="blogs-container">
       <div className="title">
         <h2>Market Place</h2>
-      </div> 
-      
-      {[1, 2, 3, 4, 5, 6, 7, 8, ].map((item, index) => (
-        <div className="blog-post" key={index}>
+      </div>
+
+      {properties.map(property => (
+        <div className="blog-post" key={property._id}>
           <div className="image-container">
-            <img src="hom1.jpeg" alt="Blog" />
+            <img src={`http://localhost:5000/${property.image}`} alt={property.title} />
           </div>
-          <div className="blog-title">10 things to know</div>
+          <h1>{property.title}</h1>
           <div className="blog-location">
-            <FaMapMarkerAlt /> Location Name
-          </div>
-          <div className="blog-features">
-            <div><FaBed /> Two Bed</div>
-            <div><FaBed /> Single Room</div>
-            <div><FaShieldAlt /> Security</div>
+            <FaMapMarkerAlt /> <p>Location: {property.location}</p>
           </div>
           <div className="blog-price">
-            $1500
+            <p>Price: ${property.price}</p>
           </div>
           <div className="read-more">
             <button>Buy</button>
