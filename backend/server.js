@@ -40,3 +40,10 @@ mongoose.connect(MONGO_URI, {
   // console.log('Properties added');
   // mongoose.connection.close();
 }).catch(err => console.error(err));
+
+// Start the Server
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
+

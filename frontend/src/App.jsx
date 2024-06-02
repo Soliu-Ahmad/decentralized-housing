@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./Pages/Home/Home";
@@ -7,8 +8,11 @@ import Footer from "./components/Footer/Footer";
 import MarketplaceForm from "./components/MarketplaceForm/MarketplaceForm";
 import ConfirmPurchase from "./components/Marketplace/ConfirmPayment";
 
+
+
 function App() {
   const [completedPurchases, setCompletedPurchases] = useState([]);
+
 
   const handleConfirmPayment = (propertyId) => {
     setCompletedPurchases([...completedPurchases, propertyId]);
@@ -29,6 +33,8 @@ function App() {
       </Routes>
     </BrowserRouter>
   );
+
+
 }
 
 export default App;
