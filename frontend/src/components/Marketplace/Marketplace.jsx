@@ -1,11 +1,13 @@
-// src/components/Marketplace.js
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Marketplace.css';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import axios from 'axios';
 
 const Marketplace = () => {
   const [properties, setProperties] = useState([]);
+  const [processing, setProcessing] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get('http://localhost:5000/properties')
@@ -16,6 +18,15 @@ const Marketplace = () => {
         console.error('There was an error fetching the properties!', error);
       });
   }, []);
+
+  const handleBuy = (propertyId) => {
+    setProcessing(propertyId);
+    // Simulate a delay for processing the purchase
+    setTimeout(() => {
+      setProcessing(null);
+      navigate(`/confirm/${propertyId}`);  // Navigate to confirmation page
+    }, 2000);  // Adjust delay as necessary
+  };
 
   return (
     <div className="blogs-container">
@@ -36,7 +47,12 @@ const Marketplace = () => {
             <p>Price: ${property.price}</p>
           </div>
           <div className="read-more">
-            <button>Buy</button>
+            <button
+              onClick={() => handleBuy(property._id)}
+              disabled={processing === property._id}
+            >
+              {processing === property._id ? 'Processing...' : 'Buy'}
+            </button>
           </div>
         </div>
       ))}

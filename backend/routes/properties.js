@@ -1,45 +1,64 @@
 const express = require('express');
+const Property = require('../models/Property');
 const router = express.Router();
 const multer = require('multer');
-const Property = require('../models/Property');
+const path = require('path');
 
-// Multer configuration for file uploads
+// Configure multer for file uploads
 const storage = multer.diskStorage({
-    destination: function(req, file, cb) {
-        cb(null, './uploads/');
-    },
-    filename: function(req, file, cb) {
-        cb(null, Date.now() + '-' + file.originalname);
-    }
+  destination: function (req, file, cb) {
+    cb(null, 'uploads/');
+  },
+  filename: function (req, file, cb) {
+    cb(null, Date.now() + path.extname(file.originalname));
+  }
 });
 
 const upload = multer({ storage: storage });
 
-// GET all properties
+// How to get all House
 router.get('/', async (req, res) => {
-    try {
-        const properties = await Property.find();
-        res.json(properties);
-    } catch (err) {
-        res.json({ message: err });
-    }
+  try {
+    const property = await Property.find();
+    res.json(property);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 });
 
-// POST a new property
+// Add new House
 router.post('/', upload.single('image'), async (req, res) => {
-    const property = new Property({
-        image: req.file.path,
-        title: req.body.title,
-        location: req.body.location,
-        price: req.body.price
-    });
+// router.post('/', upload.fields([{name: 'image', maxCount: 1}, {name: 'creatorImage', maxCount: 1}]), async (req, res) => {
+  console.log('first')
+  const property = new Property({
+    image: req.file.path,
+    title: req.body.title,
+    location: req.body.location,
+    description: req.body.description,
+    price: req.body.price
+  });
 
-    try {
-        const savedProperty = await property.save();
-        res.json(savedProperty);
-    } catch (err) {
-        res.json({ message: err });
+
+  try {
+    const newProperty = await property.save();
+    res.status(201).json(newProperty);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+});
+
+// GET property by ID
+router.get('/:propertyId', async (req, res) => {
+  try {
+    const property = await Property.findById(req.params.propertyId);
+    if (!property) {
+      return res.status(404).json({ message: 'Property not found' });
     }
+    res.json(property);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 });
 
 module.exports = router;
+

@@ -1,130 +1,144 @@
-.blog-post {
+/* Common Card Styles for Both Marketplace and Confirm Purchase */
+.card {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     background-color: #fff;
     padding: 20px;
     color: black;
-    margin: 10px;
-    flex: 1;
+    margin: 20px; /* Spacing around cards */
     max-width: 300px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.blog-post:hover {
+  }
+  
+  .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.image-container {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.image-container img {
+  }
+  
+  .card img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease;
-}
-
-.image-container:hover img {
+  }
+  
+  .card img:hover {
     transform: scale(1.1);
-}
-
-.blog-title, .blog-subtitle, .blog-location, .blog-features, .blog-price {
-    margin: 0 10px;
-}
-
-.blog-title, h2 {
+  }
+  
+  .card-title, h2 {
     font-size: 1.5em;
     font-weight: bold;
-    color: white;
-}
-
-.blog-location {
-    display: flex;
-    align-items: center;
+    color: #ffffff;
+  }
+  
+  .card-text {
     font-size: 1em;
     color: #777;
-}
-
-.blog-location svg {
-    margin-right: 5px;
-}
-
-.blog-features {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1em;
-    color: #777;
-    gap: 1px;
-}
-
-.blog-features div {
-    display: flex;
-    align-items: center;
-}
-
-.blog-features svg {
-    margin-right: 5px;
-}
-
-.blog-price {
+  }
+  
+  .card-text.price {
     font-size: 1.2em;
     color: #007bff;
     font-weight: 600;
-}
-
-.read-more {
+  }
+  
+  /* Container for Marketplace */
+  .blogs-container {
     display: flex;
-    justify-content: flex-end;
-}
-
-.read-more button {
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust space between cards */
+    gap: 20px; /* Gap between cards */
+    padding: 20px; /* Padding around container */
+  }
+  
+  .title {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .blog-post {
+    flex: 1 1 calc(25% - 40px); /* Four cards in a row on large screens */
+    box-sizing: border-box;
+  }
+  
+  .image-container img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  .blog-location,
+  .blog-price {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .read-more button {
+    margin-top: 15px;
     padding: 10px 20px;
-    font-size: 1em;
-    color: #007bff;
-    background-color: transparent;
-    border: 2px solid #007bff;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.read-more button:hover {
     background-color: #007bff;
     color: #fff;
-}
-
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .read-more button:hover {
+    background-color: #0056b3;
+  }
+  
+  .read-more button:disabled {
+    background-color: #6c757d;
+  }
+  
+  /* Confirm Purchase Container */
+  .confirm-purchase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .confirm-purchase-container .card {
+    max-width: 400px; /* Slightly wider for confirmation page */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
     .blog-post {
-        max-width: 100%;
+      flex: 1 1 calc(33.333% - 40px); /* Three cards in a row on medium screens */
     }
-}
-
-@media (max-width: 480px) {
+  }
+  
+  @media (max-width: 768px) {
+    .blog-post {
+      flex: 1 1 calc(50% - 40px); /* Two cards in a row on small screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
     .blogs-container {
-        flex-direction: column;
-        align-items: center;
+      flex-direction: column;
+      align-items: center;
     }
-
-    .title {
-        font-size: 1.5em;
+  
+    .blog-post {
+      flex: 1 1 100%; /* One card in a row on extra small screens */
+      margin: 10px 0; /* Vertical margin between cards */
     }
-
-    .blog-title {
-        font-size: 1.2em;
+  
+    .card-title {
+      font-size: 1.2em;
     }
-
-    .blog-subtitle {
-        font-size: 1em;
+  
+    .card-text {
+      font-size: 1em;
     }
-
-    .read-more button {
-        padding: 8px 16px;
-        font-size: 0.9em;
-    }
-}
+  }
+  
