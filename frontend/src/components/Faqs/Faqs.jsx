@@ -8,24 +8,24 @@ const Faqs = () => {
 
   const faqs = [
     {
-      question: "What is your return policy?",
-      answer: "Our return policy allows you to return products within 30 days of purchase with a full refund, provided they are in their original condition."
+      question: "What is tokenized real estate?",
+      answer: "Tokenized real estate involves converting physical real estate properties into digital tokens on a blockchain."
     },
     {
-      question: "How do I track my order?",
-      answer: "Once your order is shipped, we will send you an email with the tracking information. You can also track your order in your account section on our website."
+      question: "How does tokenized real estate work?",
+      answer: " Properties are divided into shares, represented by digital tokens on a blockchain. Investors can buy these tokens, gaining a proportional ownership stake in the property."
     },
     {
-      question: "Do you offer customer support?",
-      answer: "Yes, we offer 24/7 customer support. You can reach us via phone, email, or live chat on our website."
+      question: "What are the benefits of investing in tokenized real estate?",
+      answer: " It enhanced transparency, and easier transferability of ownership compared to traditional real estate investments."
     },
     {
-      question: "Can I change my shipping address?",
-      answer: "You can change your shipping address before your order is shipped. Please contact our customer support team for assistance."
+      question: "What is the minimum investment amount?",
+      answer: "The minimum investment amount varies by property but is generally lower than traditional real estate investments due to fractional ownership."
     },
     {
-      question: "What payment methods do you accept?",
-      answer: "We accept various payment methods including credit cards, PayPal, and bank transfers."
+      question: "Is my investment secure?",
+      answer: "Yes, our platform uses blockchain technology, which provides a secure and immutable ledger for all transactions. "
     }
   ];
 
