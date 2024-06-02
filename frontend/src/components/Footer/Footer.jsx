@@ -44,7 +44,7 @@ const Footer = () => {
             <h1>Quick Links</h1>
             <a href="/faqs">FAQs</a>
             <a href="/properties">Properties</a>
-            <a href="/terms">Terms of Service</a>
+            <a href="/terms">Terms of Service</a> 
           </div>
         </div>
       </div>
