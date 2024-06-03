@@ -10,6 +10,33 @@ app.use(express.json({limit: "50mb"}))
 app.use(express.urlencoded({extended: true}))
 app.use(cors())
 
+
+
+
+let propertyStatus={}
+let buyPropertyStatus={}
+
+
+app.get('/api/properties', (req, res) => {
+  res.json(propertyStatus);
+});
+
+app.post('/api/propertyStatus', (req, res) => {
+  propertyStatus = req.body;
+  res.status(200).json({ message: ' Property updated successfully' });
+});
+
+app.get('/api/buyPropertyStatus', (req, res) => {
+  res.json(buyPropertyStatus);
+});
+
+app.post('/api/buyPropertyStatus', (req, res) => {
+  buyPropertyStatus = req.body;
+  res.status(200).json({ message: 'Property status updated successfully' });
+});
+
+
+
 app.use("/properties", properties )
 
 const MONGO_URI = 'mongodb+srv://soliuahmad99:soliu1234@cluster0.suswr9x.mongodb.net/realasset';
@@ -41,9 +68,5 @@ mongoose.connect(MONGO_URI, {
   // mongoose.connection.close();
 }).catch(err => console.error(err));
 
-// Start the Server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+
 

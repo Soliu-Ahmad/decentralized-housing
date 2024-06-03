@@ -28,13 +28,34 @@ export const TransactionProvider = ({ children }) => {
     }
   };
 
-  const initializeProvider = async () => {
+//   const initializeProvider = async () => {
+//     try {
+//       const ethereumProvider = await detectEthereumProvider();
+//       if (ethereumProvider) {
+//         const ethersProvider = new ethers.providers.Web3Provider(ethereumProvider);
+//         setProvider(ethersProvider);
+
+//         const accounts = await ethereumProvider.request({ method: "eth_requestAccounts" });
+//         setCurrentAccount(accounts[0]);
+//         const ethersSigner = ethersProvider.getSigner();
+//         setSigner(ethersSigner);
+//         const contractInstance = new ethers.Contract(contractAddress, contractAbi, ethersSigner);
+//         setContract(contractInstance);
+//       } else {
+//         throw new Error("MetaMask is not installed. Please install MetaMask and try again.");
+//       }
+//     } catch (error) {
+//       console.error("Failed to initialize provider:", error);
+//     }
+//   };
+
+const initializeProvider = async () => {
     try {
       const ethereumProvider = await detectEthereumProvider();
       if (ethereumProvider) {
         const ethersProvider = new ethers.providers.Web3Provider(ethereumProvider);
         setProvider(ethersProvider);
-
+  
         const accounts = await ethereumProvider.request({ method: "eth_requestAccounts" });
         setCurrentAccount(accounts[0]);
         const ethersSigner = ethersProvider.getSigner();
@@ -48,6 +69,7 @@ export const TransactionProvider = ({ children }) => {
       console.error("Failed to initialize provider:", error);
     }
   };
+  
 
   const connectWallet = async () => {
     try {
@@ -64,13 +86,13 @@ export const TransactionProvider = ({ children }) => {
     }
   };
 
-  const purchaseArt = async () => {
+  const purchaseProperties = async () => {
     try {
       const price = await contract.price(); // Ensure price is retrieved as a BigNumber
-      await contract.purchaseArt({ value: price });
-      console.log("Art purchased successfully.");
+      await contract.purchaseProperties({ value: price });
+      console.log("Properties purchased successfully.");
     } catch (error) {
-      console.error("Failed to purchase art:", error);
+      console.error("Failed to purchase properties:", error);
     }
   };
 
@@ -98,7 +120,7 @@ export const TransactionProvider = ({ children }) => {
         contract,
         currentAccount,
         connectWallet,
-        purchaseArt,
+        purchaseProperties,
         confirmPurchase,
         disconnectWallet,
       }}

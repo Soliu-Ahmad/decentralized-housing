@@ -7,6 +7,12 @@ import Blog from "./components/Content/blogs/pages/Blog";
 import Footer from "./components/Footer/Footer";
 import MarketplaceForm from "./components/MarketplaceForm/MarketplaceForm";
 import ConfirmPurchase from "./components/Marketplace/ConfirmPayment";
+import {  TransactionProvider } from "./contest/TransactionContext";
+// import ArtStatusProvider  from "./context/PropertyStatusContext";
+// import BuyArtProvider from "./context/BuyPropertyStatusContext";
+import PropertyStatusProvider from "./context/PropertyStatusContext";
+import BuyPropertyProvider from "./context/BuyPropertyStatusContext";
+
 
 
 
@@ -19,6 +25,12 @@ function App() {
   };
 
   return (
+    <PropertyStatusProvider>
+  <BuyPropertyProvider>
+
+ 
+    
+    <TransactionProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
@@ -32,6 +44,10 @@ function App() {
         />
       </Routes>
     </BrowserRouter>
+    </TransactionProvider>
+    </BuyPropertyProvider>
+    </PropertyStatusProvider>
+    
   );
 
 
