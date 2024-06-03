@@ -1,144 +1,307 @@
-/* Common Card Styles for Both Marketplace and Confirm Purchase */
+
 .card {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background-color: #fff;
-    padding: 20px;
-    color: black;
-    margin: 20px; /* Spacing around cards */
-    max-width: 300px;
-    display: flex;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 20px;
+  color: black;
+  margin: 20px; 
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; 
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+.card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000; 
+}
+
+h2 {
+  color: #ffffff; 
+}
+
+.card-text {
+  font-size: 1em;
+  color: #777;
+}
+
+.card-text.price {
+  font-size: 1.2em;
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* Container for Marketplace */
+.blogs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  gap: 20px; 
+  padding: 20px; 
+  background-color: #ffffff;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.blog-post {
+  flex: 1 1 calc(25% - 40px); 
+  box-sizing: border-box;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.blog-location,
+.blog-price {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.read-more button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.read-more button:hover {
+  background-color: #0056b3;
+}
+
+.read-more button:disabled {
+  background-color: #6c757d;
+}
+
+.button-sold {
+  background-color: #dc3545;
+  cursor: not-allowed;
+}
+
+/* Confirm Purchase Container */
+.confirm-purchase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.confirm-purchase-container .card {
+  max-width: 300px; 
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .blog-post {
+    flex: 1 1 calc(33.333% - 40px); 
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-post {
+    flex: 1 1 calc(50% - 40px); 
+  }
+}
+
+@media (max-width: 480px) {
+  .blogs-container {
     flex-direction: column;
-    gap: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-items: center;
   }
-  
-  .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+  .blog-post {
+    flex: 1 1 100%; 
+    margin: 10px 0; 
   }
-  
-  .card img {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease;
+
+  .card-title {
+    font-size: 1.2em;
   }
-  
-  .card img:hover {
-    transform: scale(1.1);
-  }
-  
-  .card-title, h2 {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #ffffff;
-  }
-  
+
   .card-text {
     font-size: 1em;
-    color: #777;
   }
-  
-  .card-text.price {
-    font-size: 1.2em;
-    color: #007bff;
-    font-weight: 600;
-  }
-  
-  /* Container for Marketplace */
-  .blogs-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Adjust space between cards */
-    gap: 20px; /* Gap between cards */
-    padding: 20px; /* Padding around container */
-  }
-  
-  .title {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
+}
+/* Common Card Styles for Both Marketplace and Confirm Purchase */
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 20px;
+  color: black;
+  margin: 20px;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.card img:hover {
+  transform: scale(1.1);
+}
+
+.card-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #000; }
+
+h2 {
+  color: #000; 
+}
+
+.card-text {
+  font-size: 1em;
+  color: #777;
+}
+
+.card-text.price {
+  font-size: 1.2em;
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* Container for Marketplace */
+.blogs-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; 
+  gap: 20px; 
+  padding: 20px;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blog-post {
+  flex: 1 1 calc(25% - 40px); 
+  box-sizing: border-box;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.blog-location,
+.blog-price {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.read-more button {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.read-more button:hover {
+  background-color: #0056b3;
+}
+
+.read-more button:disabled {
+  background-color: #6c757d;
+}
+
+.button-sold {
+  background-color: #dc3545;
+  cursor: not-allowed;
+}
+
+
+.confirm-purchase-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+}
+
+.confirm-purchase-container .card {
+  max-width: 300px; 
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
   .blog-post {
-    flex: 1 1 calc(25% - 40px); /* Four cards in a row on large screens */
-    box-sizing: border-box;
+    flex: 1 1 calc(33.333% - 40px); 
   }
-  
-  .image-container img {
-    width: 100%;
-    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .blog-post {
+    flex: 1 1 calc(50% - 40px); 
   }
-  
-  .blog-location,
-  .blog-price {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-  }
-  
-  .read-more button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .read-more button:hover {
-    background-color: #0056b3;
-  }
-  
-  .read-more button:disabled {
-    background-color: #6c757d;
-  }
-  
-  /* Confirm Purchase Container */
-  .confirm-purchase-container {
-    display: flex;
+}
+
+@media (max-width: 480px) {
+  .blogs-container {
     flex-direction: column;
     align-items: center;
-    padding: 20px;
-    margin: 20px;
   }
-  
-  .confirm-purchase-container .card {
-    max-width: 400px; /* Slightly wider for confirmation page */
+
+  .blog-post {
+    flex: 1 1 100%; 
+    margin: 10px 0; 
   }
-  
-  /* Responsive Design */
-  @media (max-width: 1024px) {
-    .blog-post {
-      flex: 1 1 calc(33.333% - 40px); /* Three cards in a row on medium screens */
-    }
+
+  .card-title {
+    font-size: 1.2em;
   }
-  
-  @media (max-width: 768px) {
-    .blog-post {
-      flex: 1 1 calc(50% - 40px); /* Two cards in a row on small screens */
-    }
+
+  .card-text {
+    font-size: 1em;
   }
-  
-  @media (max-width: 480px) {
-    .blogs-container {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .blog-post {
-      flex: 1 1 100%; /* One card in a row on extra small screens */
-      margin: 10px 0; /* Vertical margin between cards */
-    }
-  
-    .card-title {
-      font-size: 1.2em;
-    }
-  
-    .card-text {
-      font-size: 1em;
-    }
-  }
-  
+}

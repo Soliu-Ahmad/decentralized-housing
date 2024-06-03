@@ -53,7 +53,7 @@ const initializeProvider = async () => {
     try {
       const ethereumProvider = await detectEthereumProvider();
       if (ethereumProvider) {
-        const ethersProvider = new ethers.providers.Web3Provider(ethereumProvider);
+        const ethersProvider = new ethers.BrowserProvider(ethereumProvider);
         setProvider(ethersProvider);
   
         const accounts = await ethereumProvider.request({ method: "eth_requestAccounts" });
