@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import { PropertyStatusContext } from '../../context/PropertyStatusContext';
-import { TransactionContext } from '../../contest/TransactionContext'; // Corrected import path
+import { TransactionContext } from '../../contest/TransactionContext'; 
 import { ethers } from 'ethers';
 import 'react-toastify/dist/ReactToastify.css';
 import './MarketplaceForm.css';
@@ -15,8 +15,8 @@ const MarketplaceForm = () => {
   const [price, setPrice] = useState('');
   const [image, setImage] = useState(null);
   const navigate = useNavigate();
-  const { currentAccount, purchaseProperty } = useContext(TransactionContext); // Adjusted context if needed
-  const { propertyStatus, setPropertyStatus } = useContext(PropertyStatusContext); // Adjusted context if needed
+  const { currentAccount, purchaseProperty } = useContext(TransactionContext); 
+  const { propertyStatus, setPropertyStatus } = useContext(PropertyStatusContext); 
 
   useEffect(() => {
     const checkWalletConnection = async () => {
