@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import Faqs from "../../components/Faqs/Faqs";
@@ -21,7 +21,7 @@ const Home = () => {
       <div>
         <Content />
       </div>
-      <div>
+      <div> 
         <Faqs />
       </div>
       <div>

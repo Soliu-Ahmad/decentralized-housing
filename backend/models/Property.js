@@ -1,10 +1,13 @@
 const mongoose = require('mongoose');
 
 const propertySchema = new mongoose.Schema({
-    image: String,
-    title: String,
-    location: String,
-    price: Number,
+  title: String,
+  location: String,
+  price: Number,
+  image: String
 });
 
-module.exports = mongoose.model('Property', propertySchema);
+const Property = mongoose.model('Property', propertySchema);
+
+module.exports = Property;
+

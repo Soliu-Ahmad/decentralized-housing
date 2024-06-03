@@ -1,8 +1,8 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import './DreamHome.css';
 const DreamHome = () => {
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
 
   return (
@@ -27,9 +27,9 @@ const DreamHome = () => {
           <span className="normal-text">Experience</span>
         </div>
 
-        <button className="navigate-button" onClick={() => navigate('/marketplace-form')}>
+        {/* <button className="navigate-button" onClick={() => navigate('/marketplace-form')}>
         Go to Marketplace Form
-      </button>
+      </button> */}
       </div>
     </div>
   );
